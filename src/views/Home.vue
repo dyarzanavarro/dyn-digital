@@ -1,6 +1,5 @@
 <template>
   <div class="page-wrapper">
-    <h1 class="home-page-title">{{ appTitle }}</h1>
     <img alt="logo-bento" class="logo" src="@/assets/img/boo_final.svg" />
 
     <h1>Hello 🌊</h1>
@@ -150,9 +149,7 @@ export default {
 
 
 <style lang="scss" scoped>
-:root {
-  --mainColor: #ff9800;
-}
+
 
 @import '@/theme/variables.scss';
 
