@@ -1,119 +1,204 @@
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better, please fork the repo and create a pull request or simply open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+
+
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-<img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" alt="Npm version" target="_blank" />
-<a href="https://circleci.com/gh/kefranabg/bento-starter/tree/master"><img alt="CircleCI" src="https://circleci.com/gh/kefranabg/bento-starter/tree/master.svg?style=svg&circle-token=f311e2320782a12321a769faa2ef1d3cdf5e1a10" target="_blank" /></a>
-<a href="https://bento-starter.netlify.com/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" /></a>
-<a href="https://gitHub.com/kefranabg/bento-starter/graphs/commit-activity"><img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" /></a>
-<a href="https://david-dm.org/kefranabg/bento-starter"><img alt="Dependencies" src="https://img.shields.io/david/kefranabg/bento-starter.svg" target="_blank" /></a>
-<a href="https://david-dm.org/kefranabg/bento-starter?type=dev"><img alt="DevDependencies" src="https://img.shields.io/david/dev/kefranabg/bento-starter.svg" target="_blank" /></a>
-<a href="https://github.com/kefranabg/bento-starter/blob/master/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" /></a>
-<a href="https://join.slack.com/t/bento-starter/shared_invite/enQtNjE5OTI5MzQyMTE3LTQ1N2M0NzAxYWM1OTJmYTA4YTIxMmM4MDhiNTI0MGNjZGIyNDFjY2UwNjE2Nzc3NzMzMzViOTYyOGViYjkxYzY" target="_blank"><img src="https://home-assistant.io/images/supported_brands/slack.png" height="20px" /></a>
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Best-README-Template</h3>
+
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
 </p>
 
-<h1 align="center">Welcome to bento-starter :wave:</h1>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kefranabg/bento-starter/master/src/assets/img/bento-starter.svg?sanitize=true" alt="Bento-starter"/>
-</p>
-
-<br />
-
-> :bento: **bento-starter** is an Open-Source Full-Stack solution that helps you to build fast and maintainable web applications using tools like Vue.js, Firebase, Progressive Web Apps support, dynamic offline support... The goal of this project is to provide a powerful and well configured stack (with CI/CD, hosting...) so you can focus on writing your web application very quickly.
-
-> As this project is a template project and not a CLI, you have access to the entire app configuration so you can change it according to your needs.
-
-## :book: Documentation
-
-Want to setup this stack ?
-
-:point_right: The full documentation is available [here](https://bento-starter.netlify.com/)
-
-## Demo
-
-:point_right: [https://bento-starter.firebaseapp.com](https://bento-starter.firebaseapp.com)
-
-Install the PWA demo from Google Play Store :point_right: [bento-starter Google Play Store](https://play.google.com/store/apps/details?id=com.bentostarter.bentostarterdemo)
-
-<br />
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/9840435/56022522-30ba0980-5d0c-11e9-8c61-23a9f91a926f.gif" alt="demo"/>
-</p>
-
-<br />
-
-**Lighthouse score :**
-
-![Lighthouse score](https://raw.githubusercontent.com/kefranabg/bento-starter/master/resources/lighthouse-score-report.jpg)
-
-**Optional preconfigured Github Actions workflow :**
-
-- :heavy_check_mark: Check tests and quality
-- :gear: Build the project
-- :rocket: Deploy to firebase hosting
 
 
-**The stack is made up of :**
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-- :metal: [Vue.js](https://vuejs.org/) : front-end framework
-- :wrench: [Vue-cli](https://cli.vuejs.org/) : standard tooling for vue.js development
-- :repeat: [Vuex](https://vuex.vuejs.org/) : state management
-- :floppy_disk: [Firestore](https://firebase.google.com/products/firestore/) : cloud NoSQL Database
-- :house: [Firebase hosting](https://firebase.google.com/products/hosting/) : fast and secure web hosting
-- :bust_in_silhouette: [Firebase authentication](https://firebase.google.com/products/firestore/) : for easy authentication
-- :iphone: [PWA](https://www.npmjs.com/package/@vue/cli-plugin-pwa) : progressive web app support
-- :lipstick: [Prettier](https://prettier.io/) : code formatting rules
-- :rotating_light: [Eslint](https://eslint.org/) : control code quality
-- :white_check_mark: [Jest](https://jestjs.io/) : unit testing
-- :white_check_mark: [Cypress](https://www.cypress.io/) : e2e testing
-- :mag: [Vue head](https://github.com/ktquez/vue-head) : meta description per page
-- :page_facing_up: [Optional][prerender spa plugin](https://github.com/chrisvfritz/prerender-spa-plugin) : pages prerendering
-- :green_heart: [Optional][circleci](https://circleci.com/) : continuous integration/deployment
-- :package: [Optional][bundlesize](https://github.com/siddharthkp/bundlesize) : control your js bundles sizes
-
-**App embedded features :**
-
-- :bust_in_silhouette: Google authentication
-- :mobile_phone_off: Offline support (dynamic & static caching)
-- :new: `New version available` prompt on new app deployments
-- :heavy_plus_sign: `Add to home screen` prompt for ios & android
-- :leftwards_arrow_with_hook: Smart redirection for auth protected routes
-- :sparkles: Products page example to demonstrate app data management with firestore and vuex
-- :muscle: Better PWA support for all browsers with [PWACompat](https://github.com/GoogleChromeLabs/pwacompat)
-
-## ✨ Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/tbetous"><img src="https://avatars3.githubusercontent.com/u/4435536?v=4" width="75px;" alt="Thomas Betous"/><br /><sub><b>Thomas Betous</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=tbetous" title="Code">💻</a> <a href="https://github.com/kefranabg/bento-starter/commits?author=tbetous" title="Documentation">📖</a> <a href="#question-tbetous" title="Answering Questions">💬</a> <a href="#ideas-tbetous" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-tbetous" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-tbetous" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://www.franck-abgrall.me/"><img src="https://avatars3.githubusercontent.com/u/9840435?v=4" width="75px;" alt="Franck Abgrall"/><br /><sub><b>Franck Abgrall</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=kefranabg" title="Code">💻</a> <a href="https://github.com/kefranabg/bento-starter/commits?author=kefranabg" title="Documentation">📖</a> <a href="#question-kefranabg" title="Answering Questions">💬</a> <a href="#ideas-kefranabg" title="Ideas, Planning, & Feedback">🤔</a> <a href="#review-kefranabg" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-kefranabg" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://errorna.me"><img src="https://avatars2.githubusercontent.com/u/6669733?v=4" width="75px;" alt="Thibaud Courtoison"/><br /><sub><b>Thibaud Courtoison</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=Errorname" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/mbernardeau"><img src="https://avatars0.githubusercontent.com/u/7049049?v=4" width="75px;" alt="Mathias Bernardeau"/><br /><sub><b>Mathias Bernardeau</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=mbernardeau" title="Code">💻</a> <a href="#ideas-mbernardeau" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://jamesperkins.io/"><img src="https://avatars3.githubusercontent.com/u/45409975?v=4" width="75px;" alt="James Perkins"/><br /><sub><b>James Perkins</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=perkinsjr" title="Code">💻</a> <a href="https://github.com/kefranabg/bento-starter/issues?q=author%3Aperkinsjr" title="Bug reports">🐛</a> <a href="#question-perkinsjr" title="Answering Questions">💬</a></td>
-    <td align="center"><a href="https://github.com/antoinecellier"><img src="https://avatars0.githubusercontent.com/u/5922848?v=4" width="75px;" alt="Antoine CELLIER"/><br /><sub><b>Antoine CELLIER</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=antoinecellier" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/0xflotus"><img src="https://avatars3.githubusercontent.com/u/26602940?v=4" width="75px;" alt="0xflotus"/><br /><sub><b>0xflotus</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=0xflotus" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/GregoryBevan"><img src="https://avatars1.githubusercontent.com/u/4266007?v=4" width="75px;" alt="Gr3gory B3van"/><br /><sub><b>Gr3gory B3van</b></sub></a><br /><a href="#ideas-GregoryBevan" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://www.linkedin.com/pub/roy-bakker/41/aa7/335"><img src="https://avatars2.githubusercontent.com/u/10207274?v=4" width="75px;" alt="Roy Bakker"/><br /><sub><b>Roy Bakker</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/issues?q=author%3ARoyBkker" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://adambar.pl"><img src="https://avatars0.githubusercontent.com/u/1309057?v=4" width="75px;" alt="Adam Bar"/><br /><sub><b>Adam Bar</b></sub></a><br /><a href="#ideas-NOtherDev" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/6ones"><img src="https://avatars3.githubusercontent.com/u/25098427?v=4" width="75px;" alt="Chidindu Ogbonna "/><br /><sub><b>Chidindu Ogbonna </b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=6ones" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/VincentBourdeau"><img src="https://avatars1.githubusercontent.com/u/8518122?v=4" width="75px;" alt="Vincent Bourdeau"/><br /><sub><b>Vincent Bourdeau</b></sub></a><br /><a href="https://github.com/kefranabg/bento-starter/commits?author=VincentBourdeau" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
 
-## Show your support
 
-⭐️ this repo
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## 💬 Chat
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Want to chat with us  ? 👉 [join bento-starter slack](https://join.slack.com/t/bento-starter/shared_invite/enQtNjE5OTI5MzQyMTE3LTQ1N2M0NzAxYWM1OTJmYTA4YTIxMmM4MDhiNTI0MGNjZGIyNDFjY2UwNjE2Nzc3NzMzMzViOTYyOGViYjkxYzY)
+There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
 
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should element DRY principles to the rest of your life :smile:
+
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
+
+### Built With
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [Laravel](https://laravel.com)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+```sh
+git clone https://github.com/your_username_/Project-Name.git
+```
+3. Install NPM packages
+```sh
+npm install
+```
+4. Enter your API in `config.js`
+```JS
+const API_KEY = 'ENTER YOUR API';
+```
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
 ## License
 
-This project is [MIT](https://github.com/kefranabg/bento-starter/blob/master/LICENSE) licensed.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Pages](https://pages.github.com)
+* [Animate.css](https://daneden.github.io/animate.css)
+* [Loaders.css](https://connoratherton.com/loaders)
+* [Slick Carousel](https://kenwheeler.github.io/slick)
+* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+* [Sticky Kit](http://leafo.net/sticky-kit)
+* [JVectorMap](http://jvectormap.com)
+* [Font Awesome](https://fontawesome.com)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png

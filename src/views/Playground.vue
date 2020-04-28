@@ -1,12 +1,15 @@
 <template>
-  <div class="page-wrapper">
-    <h1> Test Me</h1>
-  </div>
+  
+  <ThreeJSScene/>
+
 </template>
 
 <script>
 
+
+
 export default {
- 
-}
-</script>
+ components: { }
+ };
+
+ </script>

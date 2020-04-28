@@ -18,8 +18,9 @@
       class="login-btn"
       @click="login"
     >
-     Log in with 💾 Google
-
+    Firebase is pretty cool!
+    
+      Log in with 💾 Google
     </div>
   </div>
 </template>

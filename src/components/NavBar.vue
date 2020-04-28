@@ -1,7 +1,7 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
-      <img alt="logo-bento" class="logo" src="@/assets/img/dog-colour.svg" />
+      <img alt="logo-bento" class="logo" src="@/assets/img/boo_final.svg" />
       <span class="site-name title-desktop">{{ appTitle }}</span>
       <span class="site-name title-mobile">{{ appShortTitle }}</span>
     </router-link>
@@ -13,7 +13,7 @@
         <div class="nav-item">
           <router-link to="/playground">Playground</router-link>
         </div>
-          <div class="nav-item">
+        <div class="nav-item">
           <router-link to="/products">Products</router-link>
         </div>
         <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">

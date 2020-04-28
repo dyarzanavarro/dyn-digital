@@ -55,30 +55,35 @@ const router = new Router({
       path: '/products/:id',
       name: 'product',
       props: true,
+      
       component: () =>
         import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Product.vue')
     },
     { path: '*', redirect: '/home' },
     
+
     {
       path: '/playground',
       name: 'playground',
       props: true,
+      meta: {
+        authNotRequired: true
+      },
       component: () =>
         import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Playground.vue')
     },
     { path: '*', redirect: '/home' },
 
     {
-    path: '/Projects',
-    name: 'projects',
-    props: true,
-    component: () =>
-      import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Projects.vue')
+      path: '/Projects',
+      name: 'projects',
+      props: true,
+      meta: {
+        authNotRequired: true
+      },
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Projects.vue')
     }
-
-
-
   ]
 })
 
