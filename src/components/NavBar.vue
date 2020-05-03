@@ -5,6 +5,7 @@
       <span class="site-name title-desktop">{{ appTitle }}</span>
       <span class="site-name title-mobile">{{ appShortTitle }}</span>
     </router-link>
+
     <div class="links">
       <nav class="nav-links">
         <div class="nav-item">
@@ -67,7 +68,8 @@ export default {
   z-index: 20;
   right: 0;
   height: $navbar-height;
-  background-color: $navbar-color;
+  background-color: $background;
+  box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #faffff;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
   padding: 0.7rem 1.5rem;

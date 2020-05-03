@@ -55,12 +55,11 @@ const router = new Router({
       path: '/products/:id',
       name: 'product',
       props: true,
-      
+
       component: () =>
         import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Product.vue')
     },
     { path: '*', redirect: '/home' },
-    
 
     {
       path: '/playground',
@@ -83,6 +82,38 @@ const router = new Router({
       },
       component: () =>
         import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Projects.vue')
+    },
+    {
+      path: '/AFrameScene',
+      name: 'aFrameScene',
+      props: true,
+      meta: {
+        authNotRequired: false
+      },
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/AframeScene.vue')
+    },
+
+    {
+      path: '/ThreeJSScene',
+      name: 'threeJSScene',
+      props: true,
+      meta: {
+        authNotRequired: false,
+        hideFooter: true
+      },
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/ThreeJSScene.vue')
+    },
+
+    {
+      path: '/Legal',
+      name: 'legal',
+      meta: {
+        authNotRequired: false
+      },
+      component: () =>
+        import(/* webpackChunkName: "client-chunk-product-details" */ '@/views/Legal.vue')
     }
   ]
 })
