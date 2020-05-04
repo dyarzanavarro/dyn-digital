@@ -68,7 +68,7 @@ export default {
 }
 
 .linkhover {
-  background: linear-gradient(to right, #e3ffff 50%, #ee964b 50%);
+  background: linear-gradient(to right, $background 50%, $secondary 50%);
   background-position: -0% 0;
   background-size: 200% auto;
   color: #333;
