@@ -1,6 +1,6 @@
 // eslint-disable-next-line vue/valid-template-root
 <template>
-  <v-app>
+  <v-app class="legal">
     <v-container>
       <h1>Privacy Policy</h1>
 
@@ -86,4 +86,10 @@
 export default {}
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import '@/theme/variables.scss';
+
+#app {
+  background-color: $background !important;
+}
+</style>

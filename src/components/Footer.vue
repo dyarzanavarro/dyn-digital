@@ -1,42 +1,32 @@
 <template>
-  <v-footer dark padless>
-    <v-card
-      flat
-      tile
-      class="lighten-1 blue-grey--text darken-3 pt-0 text-center footer"
-    >
-      <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 class blue-grey--text darken-3 pt-0"
-          icon
-          :href="icon.link"
-          target="_blank"
-        >
-          <v-icon size="24px">{{ icon.icon }}</v-icon>
-        </v-btn>
-      </v-card-text>
-
-      <v-card-subtitle class="blue-grey--text darken-3 pt-0">
-        <a class="linkhover" href="/legal">Legal</a>
-      </v-card-subtitle>
-      <v-card-text class="blue-grey--text darken-3 pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-        Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-        accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a
-        sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula
-        lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus
-        iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor
-        vel ut orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="blue-grey--text darken-3 pt-0">
-        {{ new Date().getFullYear() }} — <strong>dyn-digital</strong>
-      </v-card-text>
+  <v-footer padless>
+    <v-card flat tile class="flex lighten-1 blue-grey--text footer">
+      <v-row>
+        <v-col>
+          <v-card-title class="logo_footer">
+            <v-btn
+              v-for="(icon, idx) in icons"
+              :key="idx"
+              class="mx-4 blue-grey--text darken-3 pt-0"
+              icon
+              :href="icon.link"
+              target="_blank"
+            >
+              <v-icon size="24px">{{ icon.icon }}</v-icon>
+            </v-btn>
+          </v-card-title>
+        </v-col>
+        <v-col>
+          <v-card-subtitle class="blue-grey--text text-center mb-6">
+            <a class="linkhover" href="/legal">Legal</a>
+          </v-card-subtitle>
+        </v-col>
+        <v-col>
+          <v-card-text class="blue-grey--text text-right">
+            {{ new Date().getFullYear() }} — <strong>dyn-digital</strong>
+          </v-card-text>
+        </v-col>
+      </v-row>
     </v-card>
   </v-footer>
 </template>
@@ -62,9 +52,12 @@ export default {
 <style lang="scss" scoped>
 @import '@/theme/variables.scss';
 
+.logo {
+  height: 125px;
+}
+
 .footer {
   background-color: $background !important;
-  box-shadow: -8px -8px 16px #cce6e6, 8px 8px 16px #faffff;
 }
 
 .linkhover {

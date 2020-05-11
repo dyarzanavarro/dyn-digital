@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-container fluid class="playground">
+  <v-app class="playground">
+    <v-container fluid>
       <v-toolbar-title class="title">Playground</v-toolbar-title>
 
       <v-row class="row">
@@ -23,16 +23,20 @@
                 system
               </div>
 
-              <div>
-                https://github.com/aframevr/aframe +
-                https://github.com/donmccurdy/aframe-physics-system
-              </div>
+              <div></div>
             </v-card-text>
 
             <v-card-actions>
-              <v-btn color="orange" text left>
-                Share
+              <v-btn
+                color="orange"
+                text
+                href="https://github.com/aframevr/aframe"
+                target="_blank"
+                left
+              >
+                Visit aFrame
               </v-btn>
+
               <v-spacer></v-spacer>
 
               <v-btn
@@ -43,7 +47,7 @@
                 outlined
                 color="success"
               >
-                <v-icon left>mdi-pencil</v-icon> Explore AR/VR Scene
+                Explore
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -72,9 +76,6 @@
             </v-card-text>
 
             <v-card-actions>
-              <v-btn color="orange" text left>
-                Share
-              </v-btn>
               <v-spacer></v-spacer>
 
               <v-btn
@@ -85,7 +86,7 @@
                 outlined
                 color="success"
               >
-                <v-icon left>mdi-pencil</v-icon> Explore ThreeJS Scene
+                Explore
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -96,41 +97,35 @@
             <v-img
               class="white--text align-end"
               height="200px"
-              src="https://aframe.io/images/card.jpg?v2"
+              src="@/assets/img/tenerife/03_Casa-Puerto-Madera_Alejandro-Beautell-min.jpg"
             >
             </v-img>
 
             <v-card-subtitle class="pb-0"
-              >Playing around with A-Frame in Vue</v-card-subtitle
+              >Experimental House Showcase</v-card-subtitle
             >
 
             <v-card-text class="text--primary">
               <div>
-                A quick test of A-Frames capabilities with the added physics
-                system
+                I've always wanted to experiment with an architectural / house
+                showcase
               </div>
 
-              <div>
-                https://github.com/aframevr/aframe +
-                https://github.com/donmccurdy/aframe-physics-system
-              </div>
+              <div></div>
             </v-card-text>
 
             <v-card-actions>
-              <v-btn color="orange" text left>
-                Share
-              </v-btn>
               <v-spacer></v-spacer>
 
               <v-btn
-                :to="{ name: 'aFrameScene' }"
+                :to="{ name: 'houseshowcase' }"
                 right
                 class="ma-2"
                 tile
                 outlined
                 color="success"
               >
-                <v-icon left>mdi-pencil</v-icon> Explore AR/VR Scene
+                Explore
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -154,6 +149,6 @@
 .cards {
   border-radius: 48px;
   background: $background !important;
-  box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #faffff;
+  box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #cce6e6;
 }
 </style>

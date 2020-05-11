@@ -53,14 +53,15 @@ export default {
 body {
   background-color: $background !important;
   margin: 0;
+  font-family: $body-font-family !important;
 }
 a {
   font-weight: 500;
   text-decoration: none;
 }
 #app {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Nunito', sans-serif, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -85,13 +86,6 @@ a {
     background-color: $background !important;
     margin-top: 3.6rem;
     padding: 20px;
-    .page-wrapper {
-      width: 60%;
-      margin: auto;
-      @media screen and (max-width: 1000px) {
-        width: 100%;
-      }
-    }
   }
 }
 </style>

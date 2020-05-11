@@ -1,43 +1,95 @@
 <template>
-  <header class="navbar" :class="{ offline: !networkOnLine }">
-    <router-link to="/home">
-      <img alt="logo-bento" class="logo" src="@/assets/img/logo.svg" />
-      <span class="site-name title-desktop">{{ appTitle }}</span>
-      <span class="site-name title-mobile">{{ appShortTitle }}</span>
-    </router-link>
+  <v-app>
+    <v-toolbar>
+      <header class="navbar" :class="{ offline: !networkOnLine }">
+        <router-link to="/home">
+          <img alt="logo-bento" class="logo" src="@/assets/img/logo.svg" />
+        </router-link>
 
-    <div class="links">
-      <nav class="nav-links">
-        <div class="nav-item">
-          <router-link to="/projects">Projects</router-link>
-        </div>
-        <div class="nav-item">
-          <router-link to="/playground">Playground</router-link>
-        </div>
-        <div class="nav-item">
-          <router-link to="/products">Products</router-link>
-        </div>
-        <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">
-          <router-link to="/login">Login</router-link>
-        </div>
-        <div
-          v-if="isUserLoggedIn && networkOnLine"
-          class="nav-item logout-item"
-          @click="logout"
-        >
-          <a>Logout</a>
-        </div>
-        <div v-if="!networkOnLine" class="nav-item offline-label">Offline</div>
-      </nav>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <div class="links">
+            <nav class="nav-links">
+              <div class="nav-item">
+                <router-link to="/projects">Projects</router-link>
+              </div>
+              <div class="nav-item">
+                <router-link to="/playground">Playground</router-link>
+              </div>
+              <div class="nav-item">
+                <router-link to="/products">Products</router-link>
+              </div>
+              <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">
+                <router-link to="/login">Login</router-link>
+              </div>
+              <div
+                v-if="isUserLoggedIn && networkOnLine"
+                class="nav-item logout-item"
+                @click="logout"
+              >
+                <a>Logout</a>
+              </div>
+              <div v-if="!networkOnLine" class="nav-item offline-label">
+                Offline
+              </div>
+            </nav>
 
-      <img
-        v-if="isUserLoggedIn && networkOnLine"
-        class="user-picture can-hide"
-        :src="user.photoURL"
-        alt="Avatar"
-      />
-    </div>
-  </header>
+            <img
+              v-if="isUserLoggedIn && networkOnLine"
+              class="user-picture can-hide"
+              :src="user.photoURL"
+              alt="Avatar"
+            />
+          </div>
+        </v-toolbar-items>
+        <v-toolbar-items class="hidden-md-and-up">
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+          <v-list>
+            <v-list-tile>
+              <v-list-tile-content>
+                <div class="links">
+                  <nav class="nav-links">
+                    <div class="nav-item">
+                      <router-link to="/projects">Projects</router-link>
+                    </div>
+                    <div class="nav-item">
+                      <router-link to="/playground">Playground</router-link>
+                    </div>
+                    <div class="nav-item">
+                      <router-link to="/products">Products</router-link>
+                    </div>
+                    <div
+                      v-if="!isUserLoggedIn && networkOnLine"
+                      class="nav-item"
+                    >
+                      <router-link to="/login">Login</router-link>
+                    </div>
+                    <div
+                      v-if="isUserLoggedIn && networkOnLine"
+                      class="nav-item logout-item"
+                      @click="logout"
+                    >
+                      <a>Logout</a>
+                    </div>
+                    <div v-if="!networkOnLine" class="nav-item offline-label">
+                      Offline
+                    </div>
+                  </nav>
+
+                  <img
+                    v-if="isUserLoggedIn && networkOnLine"
+                    class="user-picture can-hide"
+                    :src="user.photoURL"
+                    alt="Avatar"
+                  />
+                </div>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list>
+        </v-toolbar-items>
+      </header>
+    </v-toolbar>
+  </v-app>
 </template>
 
 <script>
@@ -72,104 +124,114 @@ export default {
   box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #faffff;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
-  padding: 0.7rem 1.5rem;
   line-height: 2.2rem;
 
   a {
     display: flex;
     align-items: center;
   }
-
   .title-desktop {
     display: inline;
   }
-
   .title-mobile {
     display: none;
   }
-
   @media (max-width: 500px) {
-    padding: 0.7rem 0.7rem;
-
+    padding: 0.2rem 0.3rem;
     .can-hide {
       display: none;
     }
-
     .title-desktop {
       display: none;
     }
-
     .title-mobile {
       display: block;
     }
+    .logo {
+      height: 1.7rem;
+    }
   }
-
   .site-name {
     font-size: 1.3rem;
     font-weight: 600;
     color: #2c3e50;
     position: relative;
   }
-
   .logo {
-    height: 24px;
+    height: 3.7rem;
     padding-right: 8px;
   }
-
   .links {
     padding-left: 1.5rem;
     box-sizing: border-box;
     white-space: nowrap;
     font-size: 0.9rem;
     position: absolute;
-    right: 1.5rem;
+    right: 0.8rem;
     top: 0.7rem;
     display: flex;
-
     .nav-links {
       display: flex;
       align-items: center;
       justify-content: center;
-
       .nav-item {
         position: relative;
         display: inline-block;
         margin-left: 1.5rem;
         line-height: 2.2rem;
-
         &:first-child {
           margin-left: 0;
+          background: linear-gradient(
+            to right,
+            $background 50%,
+            $secondary 50%
+          );
+          cursor: pointer;
+          background: linear-gradient(
+            to right,
+            $background 50%,
+            $secondary 50%
+          );
+          background-position: -0% 0;
+          background-size: 200% auto;
+          color: #333;
+          text-decoration: none;
+          transition: background-position 0.5s ease-out;
         }
-
         a {
           font-weight: 500;
           font-size: 0.9rem;
           text-decoration: none;
-          color: $navbar-link-color;
           border-color: #2c3e50;
           line-height: 1.4rem;
           display: inline-block;
           cursor: pointer;
+          background: linear-gradient(
+            to right,
+            $background 50%,
+            $secondary 50%
+          );
+          background-position: -0% 0;
+          background-size: 200% auto;
+          color: #333;
+          text-decoration: none;
+          transition: background-position 0.5s ease-out;
         }
-
         @mixin activatedLink() {
           margin-bottom: -2px;
-          border-bottom: 2px solid $vue-color;
         }
-
         .router-link-active {
           @include activatedLink;
         }
-
         @media (hover) {
           :hover {
             @include activatedLink;
+            background-position: 99.99% 0;
           }
         }
       }
     }
   }
-
   &.offline {
     background: $navbar-offline-color;
     .links .nav-links .nav-item a,
@@ -177,13 +239,11 @@ export default {
       color: white;
     }
   }
-
   .user-picture {
     max-height: 32px;
     margin-left: 1.5rem;
     border-radius: 50%;
   }
-
   .offline-label {
     padding: 0px 10px;
     border: 1px solid white;
@@ -191,5 +251,9 @@ export default {
     color: white;
     margin-left: 1.5rem;
   }
+}
+
+.links:hover {
+  background-position: 99.99% 0;
 }
 </style>

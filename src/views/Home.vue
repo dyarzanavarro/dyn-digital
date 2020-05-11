@@ -1,100 +1,75 @@
+<script>
+// eslint-disable-next-line no-lone-blocks
+{
+  /* eslint-disable vue/no-parsing-error */
+  /* eslint-disable vue/valid-v-bind */
+}
+</script>
 <template>
-  <div class="page-wrapper">
-    <v-lazy
-      v-model="isActive"
-      :options="{
-        threshold: 0.5
-      }"
-      min-height="200"
-      transition="scroll-y-transition"
-    >
-      <v-container class="container">
-        <img alt="logo-dyndigital" class="logo" src="@/assets/img/logo.png" />
-
-        <container class="entrytext">
-          <h1>Hello 🌊</h1>
-          <h2>I am Daniel</h2>
-          <h3>
-            I learn, design and
-            <a class="linkhover" href="/projects">build things</a>. Mostly on
-            the web.
-          </h3>
-          <h3>
-            I also adore
-            <a class="linkhover" href="playground">alliterations.</a>
-          </h3>
-        </container>
-        <h1>About me</h1>
-
-        <p class="text-justify">
-          Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut,
-          faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus
-          adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut,
-          mollis sed, nonummy id, metus. Nulla consequat massa quis enim.
-          Praesent venenatis metus at tortor pulvinar varius. Donec venenatis
-          vulputate lorem. Phasellus accumsan cursus velit. Pellentesque ut
-          neque.
-        </p>
-
-        <p class="text-justify">
-          Morbi mattis ullamcorper velit. Donec orci lectus, aliquam ut,
-          faucibus non, euismod id, nulla. Fusce convallis metus id felis luctus
-          adipiscing. Aenean massa. Vestibulum purus quam, scelerisque ut,
-          mollis sed, nonummy id, metus. Nulla consequat massa quis enim.
-          Praesent venenatis metus at tortor pulvinar varius. Donec venenatis
-          vulputate lorem. Phasellus accumsan cursus velit. Pellentesque ut
-          neque.
-        </p>
-      </v-container>
-    </v-lazy>
-
-    <v-container>
+  <v-app class="home">
+    <div class="page-wrapper">
       <v-lazy
-        v-model="isActive"
         :options="{
-          threshold: 0.8
+          threshold: 0.5
         }"
         min-height="200"
-        transition="scroll-x-transition"
+        transition="scroll-y-transition"
       >
-        <v-card class="mx-auto" max-width="400">
-          <v-card-title>
-            <h2 class="display-1">Daniel</h2>
-            <v-spacer></v-spacer>
-            <span class="title">$34.99</span>
-          </v-card-title>
+        <v-container class="entrytext">
+          <h2 class="introtext">Hello 🌊</h2>
+          <!-- animated Text  -->
+          <h2 class="introtext">I'm Daniel</h2>
 
-          <v-card-text>
-            Hire me now! I definitely can do some stuff. I am also bad at some
-            things. I also work well with others, preferably dogs.
-          </v-card-text>
+          <!-- animated Text  -->
 
-          <v-divider class="mx-4"></v-divider>
+          <br />
+          <h2>
+            UX Engineer and Freelance Web Developer
+          </h2>
+          <h2>
+            I learn, design and
+            <a class="linkhover" href="projects">build things</a>. Mostly on the
+            web.
+          </h2>
+          <br />
+          <h1>About me</h1>
 
-          <v-card-text>
-            <span class="subheading">Select type</span>
-
-            <v-chip-group
-              v-model="selection"
-              active-class="deep-purple--text text--accent-4"
-            >
-              <v-chip>🍉 Web Development</v-chip>
-              <v-chip>🍍 Web Design</v-chip>
-              <v-chip>🥝 UX Design / Engineering</v-chip>
-              <v-chip>🍌 Product Managment</v-chip>
-              <v-chip>🍅 Progressive Web Applications</v-chip>
-              <v-chip>🌶️ Wordpress</v-chip>
-            </v-chip-group>
-          </v-card-text>
-        </v-card>
+          <p class="text-justify">
+            Personal descrpritive essays about yourself are very particular; you
+            are, or should be, highly knowledgeable about you; descriptive
+            details can be very broad but must match your target audience- a
+            prospective employer, lover, business partner, political party,
+            charity seeking volunteers… Naturally what you divulge or share is
+            determined by your objective and the recipient/audience. Assuming
+            this is not high stakes, complex or in some way problematic, it
+            generally works well to be open, honest, sincere, truthful, modest,
+            considerate, cooperative and creative. These are not physical
+            details but character and personality traits that identify you as
+            you; the looks, appearance matters but is secondary. Again,
+            objective and audience matter. If you were meeting your adoptive
+            parents at the train station how would you’d describe your
+            appearance so you would be recognized? How would you describe
+            yourself to your fiancé’s parent so you would be well received?
+            Descriptive writing can be very persuasive- or misleading. It starts
+            and ends with you, and is determined by your objective- to gain
+            favour, get the job or…, and depends largely on the circumstances of
+            you vs what your intended audience needs to know, should know. Take
+            care to know your audience and objective, and balance your
+            descriptive details suitably. Description can range from sparse to
+            superfluous, get it right, reasonable under the circumstances, in a
+            most viable median -descriptive essay writing.
+          </p></v-container
+        >
       </v-lazy>
-    </v-container>
-  </div>
+    </div>
+  </v-app>
 </template>
 <script>
 import { mapState } from 'vuex'
+// eslint-disable-next-line import/no-extraneous-dependencies
 
 export default {
+  components: {},
   data: () => ({
     menu: false
   }),
@@ -123,9 +98,11 @@ export default {
 #app {
   background-color: $background !important;
 }
-.container {
+
+.home {
   background-color: $background !important;
 }
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -136,10 +113,7 @@ export default {
   .entrytext {
     opacity: 1;
     transform: none;
-  }
-  .logo {
-    margin-bottom: 3rem;
-    width: 30%;
+    background-color: $background !important;
   }
 
   .home-page-title {
@@ -157,5 +131,8 @@ export default {
   .linkhover:hover {
     background-position: 99.99% 0;
   }
+}
+.introtext {
+  font-size: 4rem;
 }
 </style>

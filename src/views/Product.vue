@@ -4,6 +4,7 @@
       v-if="currentProduct"
       :product="currentProduct"
     ></product-detail>
+    <p>Add details here</p>
   </div>
 </template>
 
