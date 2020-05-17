@@ -144,6 +144,17 @@ const router = new Router({
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/HouseShowcase.vue'
         )
+    },
+    {
+      path: '/WebXR',
+      name: 'webXR',
+      meta: {
+        authNotRequired: true
+      },
+      component: () =>
+        import(
+          /* webpackChunkName: "client-chunk-product-details" */ '@/views/WebXR.vue'
+        )
     }
   ]
 })

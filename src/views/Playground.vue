@@ -97,6 +97,40 @@
             <v-img
               class="white--text align-end"
               height="200px"
+              src="https://miro.medium.com/max/724/1*aDcnXab1QC_5KF8JUxDEYA.png"
+            >
+            </v-img>
+
+            <v-card-subtitle class="pb-0">WebXR</v-card-subtitle>
+
+            <v-card-text class="text--primary">
+              <div>Lorem ipsum,</div>
+
+              <div></div>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+
+              <v-btn
+                :to="{ name: 'webXR' }"
+                right
+                class="ma-2"
+                tile
+                outlined
+                color="success"
+              >
+                Explore
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+        <v-col>
+          <v-card class="mx-auto cards" max-width="400">
+            <v-img
+              class="white--text align-end"
+              height="200px"
               src="@/assets/img/tenerife/03_Casa-Puerto-Madera_Alejandro-Beautell-min.jpg"
             >
             </v-img>
