@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless>
+  <v-footer padless class="footer">
     <v-card flat tile class="flex lighten-1 blue-grey--text footer">
       <v-row>
         <v-col>

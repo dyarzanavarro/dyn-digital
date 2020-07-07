@@ -26,7 +26,7 @@
               <div></div>
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions">
               <v-btn
                 color="orange"
                 text
@@ -75,7 +75,8 @@
               <div></div>
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions"
+              >>
               <v-spacer></v-spacer>
 
               <v-btn
@@ -97,19 +98,18 @@
             <v-img
               class="white--text align-end"
               height="200px"
-              src="https://miro.medium.com/max/724/1*aDcnXab1QC_5KF8JUxDEYA.png"
+              src="https://immersive-web.github.io/webxr-samples/media/logo/webxr-logo.svg"
+              contain
             >
             </v-img>
 
             <v-card-subtitle class="pb-0">WebXR</v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>Lorem ipsum,</div>
-
-              <div></div>
+              Lorem ipsum
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions">
               <v-spacer></v-spacer>
 
               <v-btn
@@ -140,15 +140,12 @@
             >
 
             <v-card-text class="text--primary">
-              <div>
-                I've always wanted to experiment with an architectural / house
-                showcase
-              </div>
-
-              <div></div>
+              I've always wanted to experiment with an architectural / house
+              showcase
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions"
+              >>
               <v-spacer></v-spacer>
 
               <v-btn
@@ -181,8 +178,8 @@
   background: $background !important;
 }
 .cards {
-  border-radius: 48px;
+  border-radius: 48px !important;
   background: $background !important;
-  box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #cce6e6;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
 }
 </style>

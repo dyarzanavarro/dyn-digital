@@ -15,25 +15,7 @@
         <div class="nav-item">
           <router-link to="/products">Products</router-link>
         </div>
-        <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">
-          <router-link to="/login">Login</router-link>
-        </div>
-        <div
-          v-if="isUserLoggedIn && networkOnLine"
-          class="nav-item logout-item"
-          @click="logout"
-        >
-          <a>Logout</a>
-        </div>
-        <div v-if="!networkOnLine" class="nav-item offline-label">Offline</div>
       </nav>
-
-      <img
-        v-if="isUserLoggedIn && networkOnLine"
-        class="user-picture can-hide"
-        :src="user.photoURL"
-        alt="Avatar"
-      />
     </div>
   </header>
 </template>
@@ -67,7 +49,7 @@ export default {
   right: 0;
   height: $navbar-height;
   background-color: $background;
-  box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #faffff;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
   line-height: 2.2rem;
@@ -133,11 +115,7 @@ export default {
             $secondary 50%
           );
           cursor: pointer;
-          background: linear-gradient(
-            to right,
-            $background 50%,
-            $secondary 50%
-          );
+
           background-position: -0% 0;
           background-size: 200% auto;
           color: #333;

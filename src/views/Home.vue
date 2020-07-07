@@ -23,15 +23,28 @@
           <!-- animated Text  -->
 
           <br />
-          <h2>
-            UX Engineer and Freelance Web Developer
-          </h2>
-          <h2>
-            I learn, design and
-            <a class="linkhover" href="projects">build things</a>. Mostly on the
-            web.
-          </h2>
+          <v-row class="mb-6">
+            <v-col :lg="8"
+              ><h2>
+                UX Engineer and Freelance Web Developer
+              </h2>
+              <h2>
+                I learn, design and
+                <a class="linkhover" href="/projects">build things</a>. Mostly
+                on the web.
+              </h2></v-col
+            >
+            <v-col :lg="4">
+              <v-btn>Check it out</v-btn>
+            </v-col>
+          </v-row>
+
           <br />
+
+          <h1 class="introtext">Samples of my work</h1>
+          <!-- animated Text  -->
+          <ShowCase></ShowCase>
+
           <h1>About me</h1>
 
           <p class="text-justify">
@@ -58,8 +71,8 @@
             descriptive details suitably. Description can range from sparse to
             superfluous, get it right, reasonable under the circumstances, in a
             most viable median -descriptive essay writing.
-          </p></v-container
-        >
+          </p>
+        </v-container>
       </v-lazy>
     </div>
   </v-app>
@@ -67,9 +80,10 @@
 <script>
 import { mapState } from 'vuex'
 // eslint-disable-next-line import/no-extraneous-dependencies
+import ShowCase from '@/components/ShowCase'
 
 export default {
-  components: {},
+  components: { ShowCase },
   data: () => ({
     menu: false
   }),
@@ -95,25 +109,16 @@ export default {
 <style lang="scss" scoped>
 @import '@/theme/variables.scss';
 
-#app {
-  background-color: $background !important;
-}
-
-.home {
-  background-color: $background !important;
-}
-
 .page-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 1s ease-in both;
+  animation: fadeIn 2s ease-in both;
 
   .entrytext {
     opacity: 1;
     transform: none;
-    background-color: $background !important;
   }
 
   .home-page-title {
@@ -134,5 +139,6 @@ export default {
 }
 .introtext {
   font-size: 4rem;
+  animation: fadeIn 5s ease-in both;
 }
 </style>

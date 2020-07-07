@@ -2,9 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Head from 'vue-head'
 import Home from '@/views/Home'
-import CheckLogin from '@/views/CheckLogin'
-import { isNil } from 'lodash'
-import store from '@/store'
 
 Vue.use(Router)
 
@@ -23,60 +20,24 @@ const router = new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home,
-      meta: {
-        authNotRequired: true
-      }
+      component: Home
     },
-    {
-      path: '/check-login',
-      name: 'check-login',
-      component: CheckLogin,
-      meta: {
-        authNotRequired: true
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () =>
-        import(
-          /* webpackChunkName: "client-chunk-login" */ '@/views/Login.vue'
-        ),
-      meta: {
-        authNotRequired: true
-      }
-    },
+
     {
       path: '/products',
       name: 'products',
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-products" */ '@/views/Products.vue'
         )
     },
-    {
-      path: '/products/:id',
-      name: 'product',
-      props: true,
-
-      component: () =>
-        import(
-          /* webpackChunkName: "client-chunk-product-details" */ '@/views/Product.vue'
-        )
-    },
-    { path: '*', redirect: '/home' },
 
     {
       path: '/playground',
       name: 'playground',
       props: true,
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/Playground.vue'
@@ -85,12 +46,10 @@ const router = new Router({
     { path: '*', redirect: '/home' },
 
     {
-      path: '/Projects',
+      path: '/projects',
       name: 'projects',
       props: true,
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/Projects.vue'
@@ -100,9 +59,7 @@ const router = new Router({
       path: '/AFrameScene',
       name: 'aFrameScene',
       props: true,
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/AframeScene.vue'
@@ -114,7 +71,6 @@ const router = new Router({
       name: 'threeJSScene',
       props: true,
       meta: {
-        authNotRequired: true,
         hideFooter: true
       },
       component: () =>
@@ -126,9 +82,7 @@ const router = new Router({
     {
       path: '/Legal',
       name: 'legal',
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/Legal.vue'
@@ -137,9 +91,7 @@ const router = new Router({
     {
       path: '/HouseShowcase',
       name: 'houseshowcase',
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/HouseShowcase.vue'
@@ -148,9 +100,7 @@ const router = new Router({
     {
       path: '/WebXR',
       name: 'webXR',
-      meta: {
-        authNotRequired: true
-      },
+
       component: () =>
         import(
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/WebXR.vue'
@@ -163,16 +113,5 @@ const router = new Router({
  * Handle user redirections
  */
 // eslint-disable-next-line consistent-return
-router.beforeEach((to, from, next) => {
-  if (
-    !(to.meta && to.meta.authNotRequired) &&
-    isNil(store.state.authentication.user)
-  ) {
-    const path =
-      store.state.authentication.user === null ? '/login' : '/check-login'
-    return next(`${path}?redirectUrl=${to.path}`)
-  }
-  next()
-})
 
 export default router

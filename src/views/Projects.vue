@@ -1,7 +1,7 @@
 <template>
   <v-app class="projects">
     <v-container fluid>
-      <v-toolbar-title class="title">Playground</v-toolbar-title>
+      <v-toolbar-title class="title">Projects</v-toolbar-title>
 
       <v-row class="row">
         <v-col cols="12" sm="12" md="12" lg="4">
@@ -24,7 +24,7 @@
               </div>
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions">
               <v-spacer></v-spacer>
 
               <v-btn
@@ -53,14 +53,12 @@
             <v-card-subtitle class="pb-0">Steppinginto</v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>
-                Several applied universities launched a career program for STEM
-                students and it needed a Website. Had to be easily configurable
-                and understandable.
-              </div>
+              Several applied universities launched a career program for STEM
+              students and it needed a Website. Had to be easily configurable
+              and understandable.
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions">
               <v-spacer></v-spacer>
 
               <v-btn
@@ -95,13 +93,21 @@
                 Speed and UX. No longer active.
               </div>
 
-              <v-chip class="ma-2 chip" label text-color="white">
+              <v-chip class="ma-2 chip" label text-color="white" color="black">
                 <v-icon left>mdi-label</v-icon>
-                Tags
+                HTML
+              </v-chip>
+              <v-chip class="ma-2 chip" label text-color="white" color="green">
+                <v-icon left>mdi-label</v-icon>
+                CSS
+              </v-chip>
+              <v-chip class="ma-2 chip" label text-color="white" color="pink">
+                <v-icon left>mdi-label</v-icon>
+                JS
               </v-chip>
             </v-card-text>
 
-            <v-card-actions>
+            <v-card-actions class="actions">
               <v-spacer></v-spacer>
 
               <v-btn
@@ -123,7 +129,9 @@
   </v-app>
 </template>
 
-<script></script>
+<script>
+export default {}
+</script>
 
 <style scoped lang="scss">
 @import '@/theme/variables.scss';
@@ -135,9 +143,9 @@
   background: $background !important;
 }
 .cards {
-  border-radius: 48px;
+  border-radius: 48px !important;
   background: $background !important;
-  box-shadow: 8px 8px 16px #cce6e6, -8px -8px 16px #cce6e6;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
 }
 
 .card-img {
