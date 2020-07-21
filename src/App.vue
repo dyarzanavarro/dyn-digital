@@ -118,17 +118,17 @@ export default {
   }
 
   .icon-moon {
-    color: #041b37;
+    color: #121212;
   }
 
   /*Dark Theme */
   &.theme-dark {
     color: #efefef;
-    background-color: #333;
+    background-color: #121212;
 
     .main-wrapper {
       color: #efefef;
-      background-color: #333;
+      background-color: #121212;
     }
 
     a {
@@ -137,31 +137,34 @@ export default {
 
     .page-wrapper {
       color: #efefef;
-      background-color: #333 !important;
+      background-color: #121212 !important;
     }
     .v-lazy {
-      background-color: #333 !important;
+      background-color: #121212 !important;
     }
     router-view {
-      background-color: #333 !important;
+      background-color: #121212 !important;
     }
 
     h2 {
       color: #efefef;
+      opacity: 0.87;
     }
     h1 {
       color: #efefef;
+      opacity: 0.87;
     }
     .text-justify {
       color: #efefef;
+      opacity: 0.87;
     }
     .navbar {
-      background-color: #333 !important;
-      box-shadow: 8px 8px 16px #041b37, -8px -8px 16px #444;
+      background-color: #121212 !important;
+      box-shadow: 8px 8px 16px #121212, -8px -8px 16px #3b3a3a;
     }
 
     .linkhover {
-      background: linear-gradient(to right, #333 50%, $secondary 50%);
+      background: linear-gradient(to right, #121212 50%, $secondary 50%);
       background-position: -0% 0;
       background-size: 200% auto;
       color: #efefef;
@@ -169,26 +172,28 @@ export default {
       transition: background-position 0.5s ease-out;
     }
     #app {
-      background-color: #333 !important;
+      background-color: #121212 !important;
+    }
+    #app.theme-dark {
+      background-color: #121212 !important;
     }
     .title {
       color: #efefef;
     }
     .cards {
       color: #efefef;
-      background-color: #444;
+      background-color: #3b3a3a;
     }
     .pb-0 {
       color: #efefef !important;
-      background-color: #444;
+      background-color: #3b3a3a;
     }
     .text--primary {
       color: #efefef !important;
-      background-color: #444 !important;
+      background-color: #3b3a3a !important;
     }
     .footer {
       color: #efefef;
-      background-color: #333 !important;
     }
 
     .nav-item {
@@ -198,25 +203,26 @@ export default {
       line-height: 2.2rem;
       &:first-child {
         margin-left: 0;
-        background: linear-gradient(to right, #333 50%, #333 50%);
+        background: linear-gradient(to right, #121212 50%, #121212 50%);
         cursor: pointer;
       }
       a {
-        background: linear-gradient(to right, #333 50%, #333 50%);
+        background: linear-gradient(to right, #121212 50%, #121212 50%);
         cursor: pointer;
+        opacity: 0.87;
       }
     }
     .card-img2 {
-      background-color: #444 !important;
+      background-color: #3b3a3a !important;
     }
     .card-img3 {
-      background-color: #444 !important;
+      background-color: #3b3a3a !important;
     }
     .cards {
-      box-shadow: 8px 8px 16px #041b37, -8px -8px 16px #444;
+      box-shadow: 8px 8px 16px #121212, -8px -8px 16px #3b3a3a;
     }
     .actions {
-      background-color: #444 !important;
+      background-color: #3b3a3a !important;
       color: #efefef !important;
     }
   }

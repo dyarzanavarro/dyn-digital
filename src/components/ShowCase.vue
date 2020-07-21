@@ -1,9 +1,9 @@
 <template>
   <v-container fluid>
     <v-row class="row">
-      <v-col cols="12" sm="12" md="12" lg="4">
+      <v-col cols="12" sm="12" md="4" lg="4">
         <v-card
-          class="mx-auto cards mb-12"
+          class="mx-auto cards mb-6"
           max-width="400"
           href="https://psychologiestudierende.ch"
           target="_blank"
@@ -50,9 +50,9 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="12" md="12" lg="4">
+      <v-col cols="12" sm="12" md="4" lg="4">
         <v-card
-          class="mx-auto cards mb-12"
+          class="mx-auto cards mb-6"
           max-width="400"
           href="https://www.steppinginto.ch/"
           target="_blank"
@@ -85,9 +85,9 @@
         </v-card>
       </v-col>
 
-      <v-col class="lg-col-4 mb-12">
+      <v-col class="lg-col-4 mb-4">
         <v-card
-          class="mx-auto cards mb-12"
+          class="mx-auto cards mb-6"
           max-width="400"
           href="https://github.com/dyarzanavarro/workshop_website"
           target="_blank"

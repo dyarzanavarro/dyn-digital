@@ -22,12 +22,10 @@
 
 <script>
 import firebase from 'firebase/app'
-import { mapGetters, mapState } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters('authentication', ['isUserLoggedIn']),
-    ...mapState('authentication', ['user']),
     ...mapState('app', ['networkOnLine', 'appTitle', 'appShortTitle'])
   },
   methods: {
@@ -118,7 +116,7 @@ export default {
 
           background-position: -0% 0;
           background-size: 200% auto;
-          color: #333;
+          color: #121212;
           text-decoration: none;
           transition: background-position 0.5s ease-out;
         }
@@ -137,7 +135,7 @@ export default {
           );
           background-position: -0% 0;
           background-size: 200% auto;
-          color: #333;
+          color: #121212;
           text-decoration: none;
           transition: background-position 0.5s ease-out;
         }
@@ -161,6 +159,7 @@ export default {
     .links .nav-links .nav-item a,
     .site-name {
       color: white;
+      opacity: 0.87;
     }
   }
   .user-picture {

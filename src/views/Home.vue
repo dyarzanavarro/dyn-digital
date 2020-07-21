@@ -19,6 +19,7 @@
           <h2 class="introtext">Hello 🌊</h2>
           <!-- animated Text  -->
           <h2 class="introtext">I'm Daniel</h2>
+          <span class="hiddenText">at night</span>
 
           <!-- animated Text  -->
 
@@ -116,9 +117,12 @@ export default {
   align-items: center;
   animation: fadeIn 2s ease-in both;
 
+  .hiddenText {
+    color: $background;
+  }
   .entrytext {
-    opacity: 1;
     transform: none;
+    opacity: 0.87;
   }
 
   .home-page-title {
@@ -129,7 +133,7 @@ export default {
     background: linear-gradient(to right, $background 50%, $secondary 50%);
     background-position: -0% 0;
     background-size: 200% auto;
-    color: #333;
+    color: #121212;
     text-decoration: none;
     transition: background-position 0.5s ease-out;
   }
@@ -140,5 +144,9 @@ export default {
 .introtext {
   font-size: 4rem;
   animation: fadeIn 5s ease-in both;
+  opacity: 0.87;
+}
+
+.mb-6 {
 }
 </style>

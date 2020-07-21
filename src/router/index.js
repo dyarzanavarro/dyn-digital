@@ -43,7 +43,6 @@ const router = new Router({
           /* webpackChunkName: "client-chunk-product-details" */ '@/views/Playground.vue'
         )
     },
-    { path: '*', redirect: '/home' },
 
     {
       path: '/projects',

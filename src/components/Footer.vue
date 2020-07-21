@@ -64,11 +64,19 @@ export default {
   background: linear-gradient(to right, $background 50%, $secondary 50%);
   background-position: -0% 0;
   background-size: 200% auto;
-  color: #333;
+  color: #121212;
   text-decoration: none;
   transition: background-position 0.5s ease-out;
 }
 .linkhover:hover {
   background-position: 99.99% 0;
+}
+
+#app.theme-dark {
+  background-color: #121212 !important;
+}
+
+#app.theme-dark .footer {
+  background-color: #121212 !important;
 }
 </style>

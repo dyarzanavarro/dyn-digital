@@ -57,7 +57,6 @@ export default {
     content: ' ';
     height: 22px;
     width: 2px;
-    background-color: #333;
   }
 
   .close:before {

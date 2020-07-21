@@ -75,8 +75,7 @@
               <div></div>
             </v-card-text>
 
-            <v-card-actions class="actions"
-              >>
+            <v-card-actions class="actions">
               <v-spacer></v-spacer>
 
               <v-btn
@@ -144,8 +143,7 @@
               showcase
             </v-card-text>
 
-            <v-card-actions class="actions"
-              >>
+            <v-card-actions class="actions">
               <v-spacer></v-spacer>
 
               <v-btn
