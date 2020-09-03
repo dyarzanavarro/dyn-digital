@@ -35,16 +35,7 @@
                 on the web.
               </h2></v-col
             >
-            <v-col :lg="4">
-              <v-btn>Check it out</v-btn>
-            </v-col>
           </v-row>
-
-          <br />
-
-          <h1 class="introtext">Samples of my work</h1>
-          <!-- animated Text  -->
-          <ShowCase></ShowCase>
 
           <h1>About me</h1>
 
@@ -57,22 +48,13 @@
             determined by your objective and the recipient/audience. Assuming
             this is not high stakes, complex or in some way problematic, it
             generally works well to be open, honest, sincere, truthful, modest,
-            considerate, cooperative and creative. These are not physical
-            details but character and personality traits that identify you as
-            you; the looks, appearance matters but is secondary. Again,
-            objective and audience matter. If you were meeting your adoptive
-            parents at the train station how would you’d describe your
-            appearance so you would be recognized? How would you describe
-            yourself to your fiancé’s parent so you would be well received?
-            Descriptive writing can be very persuasive- or misleading. It starts
-            and ends with you, and is determined by your objective- to gain
-            favour, get the job or…, and depends largely on the circumstances of
-            you vs what your intended audience needs to know, should know. Take
-            care to know your audience and objective, and balance your
-            descriptive details suitably. Description can range from sparse to
-            superfluous, get it right, reasonable under the circumstances, in a
-            most viable median -descriptive essay writing.
+            considerate, cooperative and creative.
           </p>
+          <br />
+
+          <h1 class="introtext">Samples of my work</h1>
+          <!-- animated Text  -->
+          <ShowCase></ShowCase>
         </v-container>
       </v-lazy>
     </div>

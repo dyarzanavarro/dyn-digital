@@ -1,8 +1,66 @@
-<template> <v-app class="webXR"> </v-app></template>
+<template>
+  <v-app class="webXR">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+        Building an augmented reality application with the WebXR Device API
+      </title>
+      <link rel="stylesheet" type="text/css" href="../shared/app.css" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="../third_party/mdl/material.min.css"
+      />
+    </head>
+    <body>
+      <div id="enter-ar-info" class="demo-card mdl-card mdl-shadow--4dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">
+            Augmented Reality with the WebXR Device API
+          </h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          This is an experiment using augmented reality features with the WebXR
+          Device API. Upon entering AR, you will be surrounded by a world of
+          cubes. Learn more about these features from the
+          <a
+            href="https://codelabs.developers.google.com/codelabs/ar-with-webxr"
+            >Building an augmented reality application with the WebXR Device
+            API</a
+          >
+          Code Lab.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a
+            id="enter-ar"
+            class="mdl-button mdl-button--raised mdl-button--accent"
+          >
+            Start augmented reality
+          </a>
+        </div>
+      </div>
+      <div id="unsupported-info" class="demo-card mdl-card mdl-shadow--4dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Unsupported Browser</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          Your browser does not support AR features with WebXR. Learn more about
+          these features from the
+          <a
+            href="https://codelabs.developers.google.com/codelabs/ar-with-webxr"
+            >Building an augmented reality application with the WebXR Device
+            API</a
+          >
+          Code Lab.
+        </div>
+      </div>
+    </body>
+  </v-app>
+</template>
 
-<script>
-export default {}
-</script>
+<script></script>
 
 <style scoped lang="scss">
 @import '@/theme/variables.scss';

@@ -3,8 +3,8 @@
     <v-container fluid>
       <v-toolbar-title class="title">Playground</v-toolbar-title>
 
-      <v-row class="row">
-        <v-col>
+      <v-row class="row mb-12">
+        <v-col :lg="3">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -44,7 +44,7 @@
                 right
                 class="ma-2"
                 tile
-                outlined
+                text
                 color="success"
               >
                 Explore
@@ -53,7 +53,7 @@
           </v-card>
         </v-col>
 
-        <v-col>
+        <v-col :lg="3">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -83,7 +83,7 @@
                 right
                 class="ma-2"
                 tile
-                outlined
+                text
                 color="success"
               >
                 Explore
@@ -92,7 +92,7 @@
           </v-card>
         </v-col>
 
-        <v-col>
+        <v-col :lg="3">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -116,7 +116,7 @@
                 right
                 class="ma-2"
                 tile
-                outlined
+                text
                 color="success"
               >
                 Explore
@@ -125,7 +125,7 @@
           </v-card>
         </v-col>
 
-        <v-col>
+        <v-col :lg="3">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -151,7 +151,7 @@
                 right
                 class="ma-2"
                 tile
-                outlined
+                text
                 color="success"
               >
                 Explore
