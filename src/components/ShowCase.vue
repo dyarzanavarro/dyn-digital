@@ -21,15 +21,19 @@
             </div>
             <v-chip class="ma-2 chip" label text-color="white" color="black">
               <v-icon left>mdi-label</v-icon>
-              HTML
+              HTML5
             </v-chip>
             <v-chip class="ma-2 chip" label text-color="white" color="green">
               <v-icon left>mdi-label</v-icon>
               CSS
             </v-chip>
-            <v-chip class="ma-2 chip" label text-color="white" color="pink">
+            <v-chip class="ma-2 chip" label text-color="white" color="blue">
               <v-icon left>mdi-label</v-icon>
-              JS
+              Wordpress
+            </v-chip>
+            <v-chip class="ma-2 chip" label text-color="white" color="yellow">
+              <v-icon left>mdi-label</v-icon>
+              PHP
             </v-chip>
           </v-card-text>
 
@@ -40,10 +44,8 @@
               href="https://psychologiestudierende.ch"
               target="_blank"
               right
-              class="ma-4"
+              class="cta ma-4"
               tile
-              outlined
-              color="success"
             >
               Visit
             </v-btn>
@@ -74,10 +76,8 @@
               href="https://www.steppinginto.ch/"
               target="_blank"
               right
-              class="ma-4"
+              class="cta ma-4"
               tile
-              outlined
-              color="success"
             >
               Visit
             </v-btn>
@@ -123,10 +123,8 @@
               href="https://github.com/dyarzanavarro/workshop_website"
               target="_blank"
               right
-              class="ma-4"
+              class="cta ma-4"
               tile
-              outlined
-              color="success"
             >
               Visit
             </v-btn>
@@ -184,6 +182,12 @@ export default {
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cta {
+  color: $logo !important;
+  box-shadow: none;
+  background-color: $background !important;
 }
 
 .slide-fade-enter-active {

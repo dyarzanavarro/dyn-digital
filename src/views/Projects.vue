@@ -1,136 +1,16 @@
 <template>
   <v-app class="projects">
-    <v-container fluid>
-      <v-toolbar-title class="title">Projects</v-toolbar-title>
-
-      <v-row class="row">
-        <v-col cols="12" sm="12" md="12" lg="4">
-          <v-card
-            class="mx-auto cards mb-12"
-            max-width="400"
-            href="https://psychologiestudierende.ch"
-            target="_blank"
-          >
-            <v-img class="white--text card-img" height="200px"> </v-img>
-
-            <v-card-subtitle class="pb-0"
-              >Relaunch psychologiestudierende.ch</v-card-subtitle
-            >
-
-            <v-card-text class="text--primary">
-              <div>
-                WordPress based Relaunch for the psychology student council:
-                Design, UX, Development, Hosting
-              </div>
-            </v-card-text>
-
-            <v-card-actions class="actions">
-              <v-spacer></v-spacer>
-
-              <v-btn
-                href="https://psychologiestudierende.ch"
-                target="_blank"
-                right
-                class="ma-4"
-                tile
-                outlined
-                color="success"
-              >
-                Visit
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col cols="12" sm="12" md="12" lg="4">
-          <v-card
-            class="mx-auto cards mb-12"
-            max-width="400"
-            href="https://www.steppinginto.ch/"
-            target="_blank"
-          >
-            <v-img class="white--text card-img2" height="200px"> </v-img>
-
-            <v-card-subtitle class="pb-0">Steppinginto</v-card-subtitle>
-
-            <v-card-text class="text--primary">
-              Several applied universities launched a career program for STEM
-              students and it needed a Website. Had to be easily configurable
-              and understandable.
-            </v-card-text>
-
-            <v-card-actions class="actions">
-              <v-spacer></v-spacer>
-
-              <v-btn
-                href="https://www.steppinginto.ch/"
-                target="_blank"
-                right
-                class="ma-4"
-                tile
-                outlined
-                color="success"
-              >
-                Visit
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-
-        <v-col class="lg-col-4 mb-12">
-          <v-card
-            class="mx-auto cards mb-12"
-            max-width="400"
-            href="https://github.com/dyarzanavarro/workshop_website"
-            target="_blank"
-          >
-            <v-img class="white--text card-img3" height="200px"> </v-img>
-
-            <v-card-subtitle class="pb-0">Launch dentisana.ch</v-card-subtitle>
-
-            <v-card-text class="text--primary">
-              <div>
-                Single Page Application for a local dentistry, with focus on
-                Speed and UX. No longer active.
-              </div>
-
-              <v-chip class="ma-2 chip" label text-color="white" color="black">
-                <v-icon left>mdi-label</v-icon>
-                HTML
-              </v-chip>
-              <v-chip class="ma-2 chip" label text-color="white" color="green">
-                <v-icon left>mdi-label</v-icon>
-                CSS
-              </v-chip>
-              <v-chip class="ma-2 chip" label text-color="white" color="pink">
-                <v-icon left>mdi-label</v-icon>
-                JS
-              </v-chip>
-            </v-card-text>
-
-            <v-card-actions class="actions">
-              <v-spacer></v-spacer>
-
-              <v-btn
-                href="https://github.com/dyarzanavarro/workshop_website"
-                target="_blank"
-                right
-                class="ma-4"
-                tile
-                outlined
-                color="success"
-              >
-                Visit
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
+    <h1>Projects</h1>
+    <ShowCase></ShowCase>
   </v-app>
 </template>
 
 <script>
-export default {}
+import ShowCase from '@/components/ShowCase'
+
+export default {
+  components: { ShowCase }
+}
 </script>
 
 <style scoped lang="scss">

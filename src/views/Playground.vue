@@ -1,7 +1,7 @@
 <template>
   <v-app class="playground">
     <v-container fluid>
-      <v-toolbar-title class="title">Playground</v-toolbar-title>
+      <h1 class="title">Playground</h1>
 
       <v-row class="row mb-12">
         <v-col :lg="3">
@@ -27,25 +27,16 @@
             </v-card-text>
 
             <v-card-actions class="actions">
-              <v-btn
-                color="orange"
-                text
-                href="https://github.com/aframevr/aframe"
-                target="_blank"
-                left
-              >
-                Visit aFrame
-              </v-btn>
-
               <v-spacer></v-spacer>
 
               <v-btn
                 :to="{ name: 'aFrameScene' }"
                 right
-                class="ma-2"
+                class="cta ma-4"
                 tile
                 text
                 color="success"
+                block
               >
                 Explore
               </v-btn>
@@ -81,10 +72,11 @@
               <v-btn
                 :to="{ name: 'threeJSScene' }"
                 right
-                class="ma-2"
+                class="cta ma-4"
                 tile
                 text
                 color="success"
+                block
               >
                 Explore
               </v-btn>
@@ -114,10 +106,10 @@
               <v-btn
                 :to="{ name: 'webXR' }"
                 right
-                class="ma-2"
+                class="cta ma-4"
                 tile
                 text
-                color="success"
+                block
               >
                 Explore
               </v-btn>
@@ -148,11 +140,11 @@
 
               <v-btn
                 :to="{ name: 'houseshowcase' }"
-                right
-                class="ma-2"
+                center
+                class=" cta ma-2"
                 tile
                 text
-                color="success"
+                block
               >
                 Explore
               </v-btn>
@@ -168,6 +160,12 @@
 
 <style scoped lang="scss">
 @import '@/theme/variables.scss';
+.title {
+  padding: 3.5rem;
+  font-size: 3vw !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  display: inline-block;
+}
 
 .playground {
   background: $background !important;
@@ -179,5 +177,10 @@
   border-radius: 48px !important;
   background: $background !important;
   box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+}
+
+.cta {
+  color: $logo !important;
+  box-shadow: none;
 }
 </style>

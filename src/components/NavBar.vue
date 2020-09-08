@@ -13,7 +13,7 @@
           <router-link to="/playground">Playground</router-link>
         </div>
         <div class="nav-item">
-          <router-link to="/products">Products</router-link>
+          <router-link to="/progress">Progress</router-link>
         </div>
       </nav>
     </div>
@@ -47,9 +47,7 @@ export default {
   right: 0;
   height: $navbar-height;
   background-color: $background;
-  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
   box-sizing: border-box;
-  border-bottom: 1px solid #eaecef;
   line-height: 2.2rem;
 
   a {

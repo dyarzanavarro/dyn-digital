@@ -184,6 +184,10 @@ export default {
       color: #efefef;
       background-color: #3b3a3a;
     }
+    .cta {
+      color: $secondary !important;
+      box-shadow: none;
+    }
     .pb-0 {
       color: #efefef !important;
       background-color: #3b3a3a;
@@ -195,7 +199,12 @@ export default {
     .footer {
       color: #efefef;
     }
-
+    .claims {
+      color: white;
+    }
+    .secondClaim {
+      color: white;
+    }
     .nav-item {
       position: relative;
       display: inline-block;

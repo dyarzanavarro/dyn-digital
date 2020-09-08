@@ -8,6 +8,8 @@
 <template>
   <v-app class="home">
     <div class="page-wrapper">
+      <h2 class="introtext">I'm Daniel🌊</h2>
+      <span class="hiddenText">at night</span>
       <v-lazy
         :options="{
           threshold: 0.5
@@ -16,14 +18,17 @@
         transition="scroll-y-transition"
       >
         <v-container class="entrytext">
-          <h2 class="introtext">Hello 🌊</h2>
-          <!-- animated Text  -->
-          <h2 class="introtext">I'm Daniel</h2>
-          <span class="hiddenText">at night</span>
+          <section class="name"></section>
+          <img
+            class="img"
+            src="../assets/img/undraw_Freelancer_re_irh4.svg"
+            alt="Kiwi standing on oval"
+          />
 
           <!-- animated Text  -->
 
           <br />
+
           <v-row class="mb-6">
             <v-col :lg="8"
               ><h2>
@@ -31,12 +36,14 @@
               </h2>
               <h2>
                 I learn, design and
-                <a class="linkhover" href="/projects">build things</a>. Mostly
+                <a class="linkhover" href="/playground">build things</a>. Mostly
                 on the web.
+                <span class="hiddenText">I also like alliterations!</span>
               </h2></v-col
             >
           </v-row>
-
+          <br />
+          <br />
           <h1>About me</h1>
 
           <p class="text-justify">
@@ -52,7 +59,44 @@
           </p>
           <br />
 
-          <h1 class="introtext">Samples of my work</h1>
+          <h1 class="claims">UNDERSTAND</h1>
+          <svg id="shape-dash" viewBox="0 0 163 7">
+            <rect
+              width="93"
+              height="4"
+              x="282"
+              y="423"
+              fill-rule="evenodd"
+              transform="translate(-279 -423)"
+              style="fill:rgb(0,0,255)"
+            ></rect>
+          </svg>
+          <h1 class="secondClaim">DESIGN</h1>
+          <svg id="shape-dash" viewBox="0 0 163 7">
+            <rect
+              width="43"
+              height="4"
+              x="282"
+              y="423"
+              fill-rule="evenodd"
+              transform="translate(-149 -423)"
+              style="fill:rgb(255,255,0)"
+            ></rect>
+          </svg>
+          <h1 class="claims">TEST</h1>
+          <svg id="shape-dash" viewBox="0 0 163 7">
+            <rect
+              width="23"
+              height="4"
+              x="282"
+              y="423"
+              fill-rule="evenodd"
+              transform="translate(-279 -423)"
+              style="fill:rgb(0,255,0)"
+            ></rect>
+          </svg>
+
+          <h2 class="introtext">Samples of my work</h2>
           <!-- animated Text  -->
           <ShowCase></ShowCase>
         </v-container>
@@ -64,9 +108,10 @@
 import { mapState } from 'vuex'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import ShowCase from '@/components/ShowCase'
+import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
 
 export default {
-  components: { ShowCase },
+  components: { ShowCase, LottieAnimation },
   data: () => ({
     menu: false
   }),
@@ -106,9 +151,28 @@ export default {
     transform: none;
     opacity: 0.87;
   }
+  .name {
+    float: left;
+  }
+  .img {
+    float: right;
+    width: 40%;
+  }
 
   .home-page-title {
     text-align: center;
+  }
+  .claims {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8.08515, 0, 0, 1);
+    font-size: 8vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+  }
+  .secondClaim {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8.08515, 0, 0, 1);
+    font-size: 8vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
   }
 
   .linkhover {
@@ -124,11 +188,8 @@ export default {
   }
 }
 .introtext {
-  font-size: 4rem;
+  font-size: 3rem;
   animation: fadeIn 5s ease-in both;
   opacity: 0.87;
-}
-
-.mb-6 {
 }
 </style>

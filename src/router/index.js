@@ -18,18 +18,24 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+
+    {
       path: '/home',
       name: 'home',
       component: Home
     },
 
     {
-      path: '/products',
-      name: 'products',
+      path: '/progress',
+      name: 'progress',
 
       component: () =>
         import(
-          /* webpackChunkName: "client-chunk-products" */ '@/views/Products.vue'
+          /* webpackChunkName: "client-chunk-products" */ '@/views/Progress.vue'
         )
     },
 

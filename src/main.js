@@ -10,6 +10,7 @@ import '@/firebase/authentication'
 import '@/misc/handle-apple-install-prompt'
 import 'pwacompat'
 import vuetify from './plugins/vuetify'
+
 // eslint-disable-next-line import/order
 
 Vue.config.productionTip = false
