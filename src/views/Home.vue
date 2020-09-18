@@ -108,10 +108,9 @@
 import { mapState } from 'vuex'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import ShowCase from '@/components/ShowCase'
-import LottieAnimation from 'lottie-vuejs' // import lottie-vuejs
 
 export default {
-  components: { ShowCase, LottieAnimation },
+  components: { ShowCase },
   data: () => ({
     menu: false
   }),
