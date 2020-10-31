@@ -24,12 +24,6 @@ const router = new Router({
     },
 
     {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
-
-    {
       path: '/progress',
       name: 'progress',
 

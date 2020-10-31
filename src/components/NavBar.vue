@@ -1,6 +1,6 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
-    <router-link to="/home">
+    <router-link to="/">
       <img alt="logo-bento" class="logo" src="@/assets/img/logo.svg" />
     </router-link>
 

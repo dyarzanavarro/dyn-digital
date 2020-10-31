@@ -1,45 +1,107 @@
 <template>
-  <div class="app"></div>
+  <div id="scene-container" ref="sceneContainer"></div>
 </template>
-
 <script>
-import 'three'
+/* eslint-disable func-names */
+/* eslint-disable import/extensions */
+import * as THREE from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 export default {
+  name: 'HelloWorld',
+  data() {
+    return {
+      container: null,
+      scene: null,
+      camera: null,
+      controls: null,
+      renderer: null
+    }
+  },
   mounted() {
-    /* eslint-disable global-require */
-    /* eslint-disable no-undef */
-
-    global.THREE = require('three')
-
-    const scene = new THREE.Scene()
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    )
-
-    const renderer = new THREE.WebGLRenderer()
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    document.body.appendChild(renderer.domElement)
-    renderer.setClearColor(0xff0000, 1)
-
-    const geometry = new THREE.BoxGeometry()
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
-    const cube = new THREE.Mesh(geometry, material)
-    scene.add(cube)
-
-    camera.position.z = 5
+    this.init()
+  },
+  methods: {
+    init() {
+      // set container
+      this.container = this.$refs.sceneContainer
+      // add stats
+      // add camera
+      const fov = 135 // Field of view
+      const aspect = this.container.clientWidth / this.container.clientHeight
+      const near = 0.1 // the near clipping plane
+      const far = 50 // the far clipping plane
+      const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
+      camera.position.set(0, 4, 6)
+      this.camera = camera
+      // create scene
+      this.scene = new THREE.Scene()
+      this.scene.background = new THREE.Color('dimgray')
+      // add lights
+      const ambientLight = new THREE.HemisphereLight(
+        0xffffff, // bright sky color
+        0x222222, // dim ground color
+        1 // intensity
+      )
+      const mainLight = new THREE.DirectionalLight(0xffffff, 4.0)
+      mainLight.position.set(10, 10, 10)
+      this.scene.add(ambientLight, mainLight)
+      // add controls
+      // create renderer
+      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      this.renderer.setSize(
+        this.container.clientWidth,
+        this.container.clientHeight
+      )
+      this.renderer.setPixelRatio(window.devicePixelRatio)
+      this.renderer.gammaFactor = 2.2
+      this.renderer.outputEncoding = THREE.sRGBEncoding
+      this.renderer.physicallyCorrectLights = true
+      this.container.appendChild(this.renderer.domElement)
+      // set aspect ratio to match the new browser window aspect ratio
+      this.camera.aspect =
+        this.container.clientWidth / this.container.clientHeight
+      this.camera.updateProjectionMatrix()
+      this.renderer.setSize(
+        this.container.clientWidth,
+        this.container.clientHeight
+      )
+      const loader = new GLTFLoader()
+      loader.load(
+        'assets//ALIEN//AlienModelTry.gltf',
+        gltf => {
+          this.scene.add(gltf.scene)
+        },
+        undefined,
+        undefined
+      )
+      this.renderer.setAnimationLoop(() => {
+        this.render()
+      })
+    },
+    render() {
+      this.renderer.render(this.scene, this.camera)
+    }
   }
 }
 </script>
 
-<style>
-body {
-  margin: 0;
+<style scoped>
+h3 {
+  margin: 40px 0 0;
 }
-canvas {
-  display: block;
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+#scene-container {
+  height: 100rem;
 }
 </style>

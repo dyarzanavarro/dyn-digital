@@ -1,17 +1,29 @@
 <template>
   <v-container>
-    <v-sheet
-      tabindex="0"
-      title="Click to grap a file from your PC!"
-      color="indigo lighten-4"
-      width="100%"
-      height="200"
-      class="pa-2"
-    >
-      <input type="file" [1] accept="text/xml" style="display:none" /> [2]
-    </v-sheet>
-  </v-container>
+    <dialog-drag id="dialog-1">
+      <p>Test dialog</p>
+    </dialog-drag>
+    <drop-area @drop="drop">
+      <p>Drop Here</p>
+    </drop-area></v-container
+  >
 </template>
 <script>
-export default { name: 'FileDrop' }
+import { DialogDrag, DropArea } from 'vue-dialog-drag'
+
+export default {
+  name: 'FileDrop',
+  DialogDrag,
+  DropArea,
+  components: { DialogDrag, DropArea },
+  methods: {
+    drop(id) {
+      console.log('drop id:', id)
+    }
+  }
+}
 </script>
+<style></style>
+<style src="vue-dialog-drag/dist/vue-dialog-drag.css"></style>
+<style src="vue-dialog-drag/dist/vue-drop-area.css"></style>
+<style src="vue-dialog-drag/dist/dialog-styles.css"></style>

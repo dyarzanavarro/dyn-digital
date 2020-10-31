@@ -86,7 +86,8 @@ export default {
     const externalScript = document.createElement('script')
     externalScript.setAttribute(
       'src',
-      '//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js'
+      '//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js',
+      'https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'
     )
     document.head.appendChild(externalScript)
   }
@@ -97,5 +98,24 @@ export default {
 a-scene {
   display: block;
   width: 100%;
+}
+
+.arjs-loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arjs-loader div {
+  text-align: center;
+  font-size: 1.25em;
+  color: white;
 }
 </style>

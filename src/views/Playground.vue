@@ -1,10 +1,10 @@
 <template>
   <v-app class="playground">
     <v-container fluid>
-      <h1 class="title">Playground</h1>
+      <h1>Playground</h1>
 
-      <v-row class="row mb-12">
-        <v-col :lg="3">
+      <v-row class="row">
+        <v-col cols="12" sm="12" md="4" lg="4">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -44,7 +44,7 @@
           </v-card>
         </v-col>
 
-        <v-col :lg="3">
+        <v-col cols="12" sm="12" md="4" lg="4">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -84,7 +84,7 @@
           </v-card>
         </v-col>
 
-        <v-col :lg="3">
+        <v-col cols="12" sm="12" md="4" lg="4">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -117,7 +117,7 @@
           </v-card>
         </v-col>
 
-        <v-col :lg="3">
+        <v-col cols="12" sm="12" md="4" lg="4">
           <v-card class="mx-auto cards" max-width="400">
             <v-img
               class="white--text align-end"
@@ -160,12 +160,6 @@
 
 <style scoped lang="scss">
 @import '@/theme/variables.scss';
-.title {
-  padding: 3.5rem;
-  font-size: 3vw !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  display: inline-block;
-}
 
 .playground {
   background: $background !important;
