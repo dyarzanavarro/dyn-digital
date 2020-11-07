@@ -46,6 +46,9 @@
             <span class="hiddenText">I also like alliterations!</span>
           </h2>
         </v-row>
+        <v-row>
+          <v-col class="text-right"> <v-btn>Check it out</v-btn></v-col></v-row
+        >
 
         <br />
         <br />

@@ -177,7 +177,7 @@ export default {
 }
 
 .card-img3 {
-  background: url('../assets/img/dentisana2.gif') no-repeat;
+  background: url('../assets/img/dentisana2.mp4') no-repeat;
   display: block;
   align-content: center;
   margin-left: auto;
