@@ -3,16 +3,12 @@
 </script>
 <template>
   <div class="page-wrapper">
-    <v-app class="background">
-      <FileDrop></FileDrop>
-    </v-app>
+    <v-app class="background"> </v-app>
   </div>
 </template>
 
 <script>
-import FileDrop from '@/components/FileDrop'
-
-export default { components: { FileDrop } }
+export default {}
 </script>
 
 <style lang="scss" scoped>

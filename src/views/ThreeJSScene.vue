@@ -103,5 +103,6 @@ a {
 }
 #scene-container {
   height: 100rem;
+  width: 100%;
 }
 </style>

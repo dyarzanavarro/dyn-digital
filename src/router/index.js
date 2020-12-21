@@ -55,13 +55,13 @@ const router = new Router({
         )
     },
     {
-      path: '/AFrameScene',
-      name: 'aFrameScene',
+      path: '/THREEDPortfolio',
+      name: 'THREEDPortfolio',
       props: true,
 
       component: () =>
         import(
-          /* webpackChunkName: "client-chunk-product-details" */ '@/views/AframeScene.vue'
+          /* webpackChunkName: "client-chunk-product-details" */ '@/views/THREEDPortfolio.vue'
         )
     },
 

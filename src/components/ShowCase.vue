@@ -7,7 +7,23 @@
           max-width="400"
           href="https://psychologiestudierende.ch"
           target="_blank"
+          rel="noopener"
         >
+          <v-row align="center" class="spacer ps-2" no-gutters>
+            <v-col cols="1" sm="1" md="1">
+              <v-avatar size="36px" color="grey">
+                <v-icon dark>
+                  mdi-clipboard-check
+                </v-icon>
+              </v-avatar>
+            </v-col>
+            <v-col>
+              <v-card-title class="pb-2">Relaunch psyCH</v-card-title>
+              <v-card-subtitle class="pb-4"
+                >Wordpress Site with job platform</v-card-subtitle
+              >
+            </v-col>
+          </v-row>
           <v-img class="white--text card-img" height="200px"> </v-img>
 
           <v-card-subtitle class="pb-0"
@@ -19,22 +35,6 @@
               WordPress based Relaunch for the psychology student council:
               Design, UX, Development, Hosting
             </div>
-            <v-chip class="ma-2 chip" label text-color="white" color="black">
-              <v-icon left>mdi-label</v-icon>
-              HTML5
-            </v-chip>
-            <v-chip class="ma-2 chip" label text-color="white" color="green">
-              <v-icon left>mdi-label</v-icon>
-              CSS
-            </v-chip>
-            <v-chip class="ma-2 chip" label text-color="white" color="blue">
-              <v-icon left>mdi-label</v-icon>
-              Wordpress
-            </v-chip>
-            <v-chip class="ma-2 chip" label text-color="white" color="yellow">
-              <v-icon left>mdi-label</v-icon>
-              PHP
-            </v-chip>
           </v-card-text>
 
           <v-card-actions class="actions">
@@ -44,8 +44,10 @@
               href="https://psychologiestudierende.ch"
               target="_blank"
               right
-              class="cta ma-4"
+              class="cta "
               tile
+              :ripple="false"
+              rel="noopener"
             >
               Visit
             </v-btn>
@@ -58,15 +60,34 @@
           max-width="400"
           href="https://www.steppinginto.ch/"
           target="_blank"
+          rel="noopener"
         >
+          <v-row align="center" class="spacer ps-2" no-gutters>
+            <v-col cols="1" sm="1" md="1">
+              <v-avatar size="36px" color="grey">
+                <v-icon dark>
+                  mdi-clipboard-check
+                </v-icon>
+              </v-avatar>
+            </v-col>
+            <v-col>
+              <v-card-title class="pb-2">Steppinginto</v-card-title>
+              <v-card-subtitle class="pb-4"
+                >Wordpress Site with Booking tool</v-card-subtitle
+              >
+            </v-col>
+          </v-row>
+
           <v-img class="white--text card-img2" height="200px"> </v-img>
 
           <v-card-subtitle class="pb-0">Steppinginto</v-card-subtitle>
 
           <v-card-text class="text--primary">
-            Several applied universities launched a career program for STEM
-            students and it needed a Website. Had to be easily configurable and
-            understandable.
+            <div>
+              Several applied universities launched a career program for STEM
+              students and it needed a Website. Had to be easily configurable
+              and understandable.
+            </div>
           </v-card-text>
 
           <v-card-actions class="actions">
@@ -76,8 +97,10 @@
               href="https://www.steppinginto.ch/"
               target="_blank"
               right
-              class="cta ma-4"
+              class="cta"
               tile
+              :ripple="false"
+              rel="noopener"
             >
               Visit
             </v-btn>
@@ -91,7 +114,24 @@
           max-width="400"
           href="https://github.com/dyarzanavarro/workshop_website"
           target="_blank"
+          rel="noopener"
         >
+          <v-row align="center" class="spacer ps-2" no-gutters>
+            <v-col cols="1" sm="1" md="1">
+              <v-avatar size="36px" color="grey">
+                <v-icon dark>
+                  mdi-clipboard-check
+                </v-icon>
+              </v-avatar>
+            </v-col>
+            <v-col>
+              <v-card-title class="pb-2">Launch dentisana.ch</v-card-title>
+              <v-card-subtitle class="pb-4"
+                >Simple SPA for dentistry place</v-card-subtitle
+              >
+            </v-col>
+          </v-row>
+
           <v-img class="white--text card-img3" height="200px"> </v-img>
 
           <v-card-subtitle class="pb-0">Launch dentisana.ch</v-card-subtitle>
@@ -101,19 +141,6 @@
               Single Page Application for a local dentistry, with focus on Speed
               and UX. No longer active.
             </div>
-
-            <v-chip class="ma-2 chip" label text-color="white" color="black">
-              <v-icon left>mdi-label</v-icon>
-              HTML
-            </v-chip>
-            <v-chip class="ma-2 chip" label text-color="white" color="green">
-              <v-icon left>mdi-label</v-icon>
-              CSS
-            </v-chip>
-            <v-chip class="ma-2 chip" label text-color="white" color="pink">
-              <v-icon left>mdi-label</v-icon>
-              JS
-            </v-chip>
           </v-card-text>
 
           <v-card-actions class="actions">
@@ -123,8 +150,10 @@
               href="https://github.com/dyarzanavarro/workshop_website"
               target="_blank"
               right
-              class="cta ma-4"
+              class="cta"
               tile
+              :ripple="false"
+              rel="noopener"
             >
               Visit
             </v-btn>
@@ -132,10 +161,13 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-banner></v-banner>
   </v-container>
 </template>
 
 <script>
+/* eslint-disable vue/valid-v-bind */
+
 export default {
   name: 'ShowCase'
 }
@@ -151,8 +183,7 @@ export default {
   background: $background !important;
 }
 .cards {
-  border-radius: 48px !important;
-  background: $background !important;
+  background: white !important;
   box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
 }
 
@@ -177,7 +208,7 @@ export default {
 }
 
 .card-img3 {
-  background: url('../assets/img/dentisana2.mp4') no-repeat;
+  background: url('../assets/img/dentisana2.gif') no-repeat;
   display: block;
   align-content: center;
   margin-left: auto;
@@ -187,7 +218,7 @@ export default {
 .cta {
   color: $logo !important;
   box-shadow: none;
-  background-color: $background !important;
+  background-color: white !important;
 }
 
 .slide-fade-enter-active {

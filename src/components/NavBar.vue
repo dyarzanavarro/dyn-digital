@@ -72,7 +72,7 @@ export default {
       display: block;
     }
     .logo {
-      height: 1.7rem;
+      height: 2.4rem;
     }
   }
   .site-name {
@@ -176,5 +176,8 @@ export default {
 
 .links:hover {
   background-position: 99.99% 0;
+}
+.nav-item {
+  margin-left: 1rem !important;
 }
 </style>

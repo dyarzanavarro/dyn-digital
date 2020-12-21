@@ -58,6 +58,7 @@ export default {
 
 .footer {
   background-color: $background !important;
+  padding-bottom: 1.4rem;
 }
 
 .linkhover {

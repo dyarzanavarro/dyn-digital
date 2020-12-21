@@ -1,88 +1,14 @@
-<script>
-// eslint-disable-next-line no-lone-blocks
-{
-  /* eslint-disable vue/no-parsing-error */
-  /* eslint-disable vue/valid-v-bind */
-}
-</script>
 <template>
   <v-app class="home">
-    <v-lazy
-      :options="{
-        threshold: 0.5
-      }"
-      min-height="200"
-      transition="scroll-y-transition"
-    >
-      <v-container class="entrytext">
-        <v-row class="mb-8">
-          <v-col :lg="8">
-            <h2 class="introtext">I'm Daniel</h2>
-            <span class="hiddenText">at night</span></v-col
-          >
+    <v-container> </v-container>
 
-          <!-- animated Text  -->
-
-          <br />
-          <v-col>
-            <img
-              class="img"
-              src="..\assets\DoogieDoodle.png"
-              alt="me with dog"
-            />
-          </v-col>
-        </v-row>
-        <v-row>
-          <h2>
-            UX Engineer and Freelance Web Developer
-          </h2>
-        </v-row>
-        <v-row>
-          <h2>
-            I learn, design and build things for
-            <a class="linkhover" href="/projects">work </a> and for
-            <a class="linkhover" href="/playground">fun</a>. <br />
-            Mostly on the web.
-            <span class="hiddenText">I also like alliterations!</span>
-          </h2>
-        </v-row>
-        <v-row>
-          <v-col class="text-right"> <v-btn>Check it out</v-btn></v-col></v-row
-        >
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <h2 class="introtext">Samples of my work</h2>
-
-        <ShowCase></ShowCase>
-
-        <h1>About me</h1>
-
-        <p class="text-justify">
-          Personal descrpritive essays about yourself are very particular; you
-          are, or should be, highly knowledgeable about you; descriptive details
-          can be very broad but must match your target audience- a prospective
-          employer, lover, business partner, political party, charity seeking
-          volunteers… Naturally what you divulge or share is determined by your
-          objective and the recipient/audience. Assuming this is not high
-          stakes, complex or in some way problematic, it generally works well to
-          be open, honest, sincere, truthful, modest, considerate, cooperative
-          and creative.
-        </p>
-        <br />
-
-        <!-- animated Text  -->
-      </v-container>
-    </v-lazy>
+    <ShowCase />
   </v-app>
 </template>
 <script>
 import { mapState } from 'vuex'
 // eslint-disable-next-line import/no-extraneous-dependencies
-import ShowCase from '@/components/ShowCase'
+import ShowCase from '@/components/ShowCase.vue'
 
 export default {
   components: { ShowCase },

@@ -9,12 +9,12 @@
             <v-img
               class="white--text align-end"
               height="200px"
-              src="https://aframe.io/images/card.jpg?v2"
+              src="https://miro.medium.com/max/724/1*aDcnXab1QC_5KF8JUxDEYA.png"
             >
             </v-img>
 
             <v-card-subtitle class="pb-0"
-              >Playing around with A-Frame in Vue</v-card-subtitle
+              >Creating a 3D Portfolio in ThreeJS</v-card-subtitle
             >
 
             <v-card-text class="text--primary">
@@ -30,13 +30,14 @@
               <v-spacer></v-spacer>
 
               <v-btn
-                :to="{ name: 'aFrameScene' }"
+                :to="{ name: 'THREEDPortfolio' }"
                 right
                 class="cta ma-4"
                 tile
                 text
                 color="success"
                 block
+                rel="noopener"
               >
                 Explore
               </v-btn>
@@ -77,6 +78,7 @@
                 text
                 color="success"
                 block
+                rel="noopener"
               >
                 Explore
               </v-btn>
@@ -110,6 +112,7 @@
                 tile
                 text
                 block
+                rel="noopener"
               >
                 Explore
               </v-btn>
@@ -145,6 +148,7 @@
                 tile
                 text
                 block
+                rel="noopener"
               >
                 Explore
               </v-btn>
@@ -156,7 +160,14 @@
   </v-app>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'Playground',
+  data() {
+    return {}
+  }
+}
+</script>
 
 <style scoped lang="scss">
 @import '@/theme/variables.scss';

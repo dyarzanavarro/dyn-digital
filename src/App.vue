@@ -1,13 +1,10 @@
-<script>
-/* eslint-disable import/no-extraneous-dependencies */
-</script>
 <template>
   <div id="app" :class="{ 'theme-dark ': nightMode }">
     <v-app class="vuetifyapp">
       <nav-bar> </nav-bar>
 
       <div class="main-wrapper">
-        <v-container class="text-right">
+        <v-container class="text-left">
           <v-icon
             v-if="nightMode"
             class="icon-sun"
@@ -38,6 +35,7 @@
   </div>
 </template>
 <script>
+/* eslint-disable import/no-extraneous-dependencies */
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import NewContentAvailableToastr from '@/components/NewContentAvailableToastr'
@@ -80,13 +78,17 @@ export default {
 
 <style lang="scss">
 @import '@/theme/variables.scss';
-
+html {
+  overflow: hidden !important;
+}
 #app {
   font-family: -apple-system, BlinkMacSystemFont, 'Nunito', sans-serif, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  background-color: $background;
+
   .new-content-available-toastr {
     position: absolute;
     bottom: 10px;
@@ -123,11 +125,11 @@ export default {
 
   /*Dark Theme */
   &.theme-dark {
-    color: #efefef;
+    color: $background;
     background-color: #121212;
 
     .main-wrapper {
-      color: #efefef;
+      color: $background;
       background-color: #121212;
     }
 
@@ -187,6 +189,7 @@ export default {
     .cta {
       color: $secondary !important;
       box-shadow: none;
+      background-color: #3b3a3a !important;
     }
     .pb-0 {
       color: #efefef !important;
