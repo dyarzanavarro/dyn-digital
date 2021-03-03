@@ -1,10 +1,12 @@
 <template>
   <div id="app" :class="{ 'theme-dark ': nightMode }">
     <v-app class="vuetifyapp">
-      <nav-bar> </nav-bar>
-
       <div class="main-wrapper">
-        <v-container class="text-left">
+        <v-container
+          class="text-right"
+          style="padding: 1rem;
+}"
+        >
           <v-icon
             v-if="nightMode"
             class="icon-sun"
@@ -17,6 +19,7 @@
         >
         <router-view />
       </div>
+      <nav-bar> </nav-bar>
 
       <new-content-available-toastr
         v-if="newContentAvailable"
@@ -78,7 +81,8 @@ export default {
 
 <style lang="scss">
 @import '@/theme/variables.scss';
-html {
+
+.vuetifyapp {
   overflow: hidden !important;
 }
 #app {
@@ -87,6 +91,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  padding: 0.6rem;
   background-color: $background;
 
   .new-content-available-toastr {
@@ -107,16 +112,9 @@ html {
     margin: auto;
     z-index: 1000;
   }
-  .main-wrapper {
-    margin-top: 3.6rem;
-    padding: 20px;
-  }
-  a {
-    font-weight: 500;
-    text-decoration: none;
-  }
+
   .icon-sun {
-    color: #fcda5f;
+    color: #fcda5f !important;
   }
 
   .icon-moon {
@@ -131,12 +129,16 @@ html {
     .main-wrapper {
       color: $background;
       background-color: #121212;
+      z-index: 1000;
+      padding-right: 2rem;
     }
 
     a {
       color: #efefef;
     }
-
+    .hamburger {
+      color: #efefef;
+    }
     .page-wrapper {
       color: #efefef;
       background-color: #121212 !important;
@@ -243,6 +245,10 @@ html {
   &.theme-light {
     background-color: $background !important;
     color: #2c3e50 !important;
+  }
+  .main-wrapper {
+    padding-right: 2rem;
+    z-index: 1000;
   }
 }
 </style>

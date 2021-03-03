@@ -13,5 +13,6 @@
   "[scss]": {
     "editor.formatOnSave": true
   },
-  "vscode-corda.isCordaProject": false
+  "vscode-corda.isCordaProject": false,
+  "xd.globalEditor": false
 }

@@ -1,17 +1,13 @@
 <template>
   <v-app class="home">
-    <v-container> </v-container>
-
-    <ShowCase />
+    <h1>TITEL SCREN</h1>
   </v-app>
 </template>
 <script>
 import { mapState } from 'vuex'
 // eslint-disable-next-line import/no-extraneous-dependencies
-import ShowCase from '@/components/ShowCase.vue'
 
 export default {
-  components: { ShowCase },
   data: () => ({
     menu: false
   }),
@@ -37,52 +33,59 @@ export default {
 <style lang="scss" scoped>
 @import '@/theme/variables.scss';
 
-.hiddenText {
-  color: $background;
-}
-.entrytext {
-  transform: none;
-  opacity: 0.87;
-}
-.name {
-  float: left;
-}
-.img {
-  float: right;
-  width: 60%;
-}
-
-.home-page-title {
-  text-align: center;
-}
-.claims {
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8.08515, 0, 0, 1);
-  font-size: 8vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: inline-block;
-}
-.secondClaim {
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8.08515, 0, 0, 1);
-  font-size: 8vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: right;
-}
-
-.linkhover {
-  background: linear-gradient(to right, $background 50%, $secondary 50%);
-  background-position: -0% 0;
-  background-size: 200% auto;
-  color: #121212;
+.intro_links {
+  line-height: 80%;
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: black;
   text-decoration: none;
+  background: linear-gradient(to right, $background 50%, $secondary 50%);
+  background-size: 200% auto;
+  background-position: -0% 0;
   transition: background-position 0.5s ease-out;
 }
-.linkhover:hover {
+.intro_sublink {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $logoSecondary;
+  text-decoration: none;
+}
+.v-application p {
+  margin-bottom: 0px;
+}
+
+.intro_links:hover {
   background-position: 99.99% 0;
 }
 
-.introtext {
-  font-size: 5.2rem;
-  animation: fadeIn 5s ease-in both;
-  opacity: 0.87;
+.cards {
+  background: white !important;
+  box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+}
+.card-img {
+  background: url(https://psychologiestudierende.ch/wp-content/uploads/2020/04/cropped-psyCH_logo_PNG_white_medium.png)
+      no-repeat,
+    #da0020;
+  background-size: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta {
+  color: $logo !important;
+  box-shadow: none;
+  background-color: white !important;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

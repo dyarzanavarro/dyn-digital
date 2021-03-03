@@ -20,7 +20,20 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Home Page - danielyarzanavarro',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The home page of danielyarzanavarro.'
+          },
+          {
+            property: 'og:description',
+            content: 'The home page of our danielyarzanavarro.'
+          }
+        ]
+      }
     },
 
     {
